@@ -1,25 +1,38 @@
-# Latin American Data & Economics Projects
+# Latin American Sovereign Debt Risk Dashboard
 
-Two independent research projects applying Python, SQL, and econometric/statistical methods to development economics questions in Latin America and the Caribbean.
+**A SQL- and Power BI-driven screen of external debt risk across 17 Latin American and Caribbean economies (2010–2022).**
 
-**Author:** Mateo Echeverria — Data Science @ Northwestern University ([LinkedIn](#) | matthewecheverria2028@u.northwestern.edu)
+## Key Finding
 
----
+Debt risk in the region is multidimensional — the country with the highest overall debt burden (Suriname) is not the same country with the highest refinancing risk (Argentina) or the highest debt-service strain (Colombia). A single debt-to-GDP ranking would miss all of this. The analysis also finds no simple region-wide relationship between debt burden and GDP growth — the most extreme data point (Guyana) is explained by a country-specific event (its 2020-onward offshore oil boom) rather than a general pattern.
 
-## Projects
+## Dashboard
 
-### 📊 [Renewable Energy & CO2 Emissions in Latin America](./co2-emissions-project)
-A panel-data econometric analysis testing whether renewable energy adoption predicts lower CO2 emissions across 26 LAC countries (2000–2022). Uses fixed-effects regression to show that a naive cross-country correlation weakens substantially once country and year effects are controlled for — a lesson in why cross-country comparisons can mislead.
+![Dashboard screenshot](./dashboard_screenshot.png)
 
-**Tools:** Python, pandas, statsmodels, linearmodels, World Bank API
+*(Built in Power BI. Interactive .pbix file not included since it was built on a school-managed account; screenshot above reflects the finished, interactive version.)*
 
-### 💰 [Latin American Sovereign Debt Risk Dashboard](./debt-risk-dashboard)
-A SQL-driven risk screen of external debt across 17 LAC economies (2010–2022), covering debt burden, refinancing risk, and debt service strain — visualized in an interactive Power BI dashboard.
+## Data & Method
 
-**Tools:** Python, SQL (SQLite), Power BI, World Bank API
+- **Source:** World Bank International Debt Statistics & World Development Indicators, pulled via the `wbgapi` Python package
+- **Sample:** 17 LAC economies, 2010–2022
+- **Pipeline:** Python → SQLite database → SQL queries (including window functions for year-over-year change) → exported dataset → Power BI dashboard
+- **Indicators:** External debt (% of GNI), short-term debt (% of total external debt), debt service (% of exports), GDP growth, inflation
 
----
+## SQL Queries
 
-## Why these projects
+The analysis is built on four core queries (see the notebook for full SQL):
+1. Current debt burden ranking by country
+2. Year-over-year change in debt service burden (window function)
+3. Refinancing risk classification (short-term debt exposure, flagged Low/Moderate/Elevated)
+4. Debt burden vs. GDP growth, country-level averages
 
-Both projects pull real public data (World Bank), apply a genuine statistical or database method rather than surface-level charting, and end in a written, policy-relevant finding rather than just a visualization. They're built to reflect the kind of applied, evidence-based analysis used in development finance and multilateral research settings.
+## Files
+
+- [`lac_debt_sql_powerbi.ipynb`](./lac_debt_sql_powerbi.ipynb) — full pipeline: data pull, SQL database creation, all four queries, Power BI export
+- [`debt_risk_brief.md`](./debt_risk_brief.md) — full written findings brief
+- `dashboard_screenshot.png` — screenshot of the finished Power BI dashboard
+
+## Caveats
+
+This is a public-data risk screen, not a full sovereign credit analysis — it does not account for currency composition of debt, maturity profiles beyond short/long-term, or market access. See the full brief for details.
