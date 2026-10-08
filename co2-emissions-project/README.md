@@ -10,7 +10,8 @@ A simple cross-country comparison shows a strong negative relationship between r
 
 - **Source:** World Bank World Development Indicators, pulled via the `wbgapi` Python package
 - **Sample:** 26 Latin American & Caribbean countries, 2000–2022 (~576 country-year observations)
-- **Variables:** CO2 emissions per capita, renewable energy share (% of final energy consumption), GDP per capita
+- **Variables:** CO2 emissions per capita excluding land use (`EN.GHG.CO2.PC.CE.AR5`), renewable energy share (% of final energy consumption), log GDP per capita
+- **Note:** The World Bank retired its older CO2 series (`EN.ATM.CO2E.PC`) from World Development Indicators, so this analysis uses the current CO2 series, `EN.GHG.CO2.PC.CE.AR5`.
 - **Method:** Pooled OLS regression, then a two-way fixed-effects panel regression (country + year effects), using `statsmodels` and `linearmodels`
 
 | Model | Coefficient on renewable share | p-value |
