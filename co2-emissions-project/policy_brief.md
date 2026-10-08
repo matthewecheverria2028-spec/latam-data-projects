@@ -14,9 +14,9 @@ LAC has one of the cleanest electricity grids in the world on average, driven la
 
 ## Data and Method
 
-The analysis draws on four World Bank World Development Indicators for 26 LAC countries, 2000–2022 (576 country-year observations after cleaning):
+The analysis draws on three World Bank World Development Indicators for 26 LAC countries, 2000–2022 (576 country-year observations after cleaning):
 
-- **CO2 emissions per capita** (outcome variable)
+- **CO2 emissions per capita, excluding land use** (outcome variable)
 - **Renewable energy as a share of final energy consumption** (variable of interest)
 - **GDP per capita, log-transformed** (control for economic development)
 
