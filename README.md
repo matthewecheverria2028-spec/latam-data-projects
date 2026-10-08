@@ -2,7 +2,7 @@
 
 Two independent research projects applying Python, SQL, and econometric/statistical methods to development economics questions in Latin America and the Caribbean.
 
-**Author:** Mateo Echeverria — Data Science @ Northwestern University ([LinkedIn](#) | matthewecheverria2028@u.northwestern.edu)
+**Author:** Matthew (Mateo) Echeverria, Data Science & Economics, Northwestern University (matthewecheverria2028@u.northwestern.edu)
 
 ---
 
@@ -22,4 +22,4 @@ A SQL-driven risk screen of external debt across 17 LAC economies (2010–2022),
 
 ## Why these projects
 
-Both projects pull real public data (World Bank), apply a genuine statistical or database method rather than surface-level charting, and end in a written, policy-relevant finding rather than just a visualization. They're built to reflect the kind of applied, evidence-based analysis used in development finance and multilateral research settings.
+Both projects start from public World Bank data, use a method suited to the question (panel regression in one, a SQL database in the other), and end in a written finding for a policy reader. Each folder has the notebook, a short README with the key result, and the full brief.
