@@ -24,7 +24,7 @@ Debt risk in the region is multidimensional — the country with the highest ove
 The analysis is built on four core queries (see the notebook for full SQL):
 1. Current debt burden ranking by country
 2. Year-over-year change in debt service burden (window function)
-3. Refinancing risk classification (short-term debt exposure, flagged Low/Moderate/Elevated)
+3. Refinancing risk classification (short-term debt exposure, flagged Lower/Moderate/Elevated)
 4. Debt burden vs. GDP growth, country-level averages
 
 ## Files
