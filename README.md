@@ -2,7 +2,7 @@
 
 Two independent research projects applying Python, SQL, and econometric/statistical methods to development economics questions in Latin America and the Caribbean.
 
-**Author:** Matthew (Mateo) Echeverria, Data Science & Economics, Northwestern University (matthewecheverria2028@u.northwestern.edu)
+**Author:** Matthew Echeverria, Data Science & Economics, Northwestern University (matthewecheverria2028@u.northwestern.edu)
 
 ---
 
